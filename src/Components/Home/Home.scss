@@ -1,0 +1,131 @@
+$bg: rgb(16, 16, 16);
+
+.banner {
+  color: #ffff;
+  height: 400px;
+  background-color: $bg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+    background-color: $bg;
+  }
+  h1,
+  p {
+    color: #ebe4e4ef;
+    font-size: 2rem;
+    width: 50%;
+    z-index: 10;
+    margin: 1rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+    word-spacing: 2px;
+  }
+  div {
+    display: flex;
+    
+    button {
+      cursor: pointer;
+      color: black;
+      padding: 1rem;
+      width: 150px;
+      outline: none;
+      border: none;
+      z-index: 10;
+      border-radius: 5px;
+      background-color: #ffff;
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight:400;
+      gap: 1rem;
+      &:nth-child(odd){
+        background-color:#ffff;
+        opacity: 0.9;
+        &:hover{
+          background-color: rgb(146, 143, 143);
+        }
+      }
+      &:nth-child(even){
+        background-color: $bg;
+        opacity: 0.9;
+        color: #ffff;
+        &:hover{
+          background-color: rgb(146, 143, 143);
+        }
+      }
+      > svg{
+        color: $bg;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        background-color: #e50914fa;  
+        align-items: center;
+        font-weight: bolder;
+        transition: transform 0.5s;
+        &:hover{
+          transform:  scale(1.3);
+        }
+      }
+    }
+  }
+}
+
+.row {
+  background-color: $bg;
+  // box-sizing: border-box;
+  > div {
+    display: flex;
+    overflow-x: auto;
+  }
+  padding: 1rem;
+  > h2 {
+    margin: 0.3rem;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+
+.card {
+  width: 175px;
+  height: 175px;
+  margin: 0.5rem;
+
+  cursor: pointer;
+  transition: transform 0.5s;
+  &:hover {
+    transform: translateY(-10px) scale(1.01);
+  }
+}
+.genreBox {
+  display: flex;
+  overflow-x: auto;
+  height: 100px;
+  background-color: $bg;
+  align-items: center;
+  flex: 0%;
+  > a {
+    color: $bg;
+    background-color: #ffff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    text-align: center;
+    min-width: 10rem;
+    &:hover {
+      background-color: #bcbbbb;
+    }
+  }
+}
